@@ -47,4 +47,8 @@ extension ContiguousBytes {
     var symmetricKey: SymmetricKey { .init(data: self) }
 }
 
+extension ByteBuffer {
+    var data: Data { .init(buffer: self) }
+}
+
 #endif
