@@ -11,7 +11,7 @@ import protocol Foundation.ContiguousBytes
 import struct Foundation.Data
 import CryptoKit
 
-extension StringProtocol {
+public extension StringProtocol {
 
     var sha256hexa: String { data.sha256digest.hexa }
     var sha384hexa: String { data.sha384digest.hexa }
@@ -29,7 +29,7 @@ extension StringProtocol {
     }
 }
 
-extension DataProtocol {
+public extension DataProtocol {
 
     var sha256digest: SHA256Digest { SHA256.hash(data: self) }
     var sha384digest: SHA384Digest { SHA384.hash(data: self) }
@@ -45,8 +45,7 @@ extension DataProtocol {
     }
 }
 
-
-extension ContiguousBytes {
+public extension ContiguousBytes {
     var symmetricKey: SymmetricKey { .init(data: self) }
 }
 

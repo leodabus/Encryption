@@ -3,7 +3,7 @@
 
 import struct Foundation.Data
 
-extension StringProtocol {
+public extension StringProtocol {
 
     var data: Data { .init(utf8) }
     var hexaData: Data { .init(hexa) }
@@ -23,7 +23,7 @@ extension StringProtocol {
     }
 }
 
-extension Sequence where Element == UInt8 {
+public extension Sequence where Element == UInt8 {
 
     var string: String? { .init(bytes: self, encoding: .utf8) }
     var hexa: String { map { String(format: "%02hhx", $0) }.joined() }
