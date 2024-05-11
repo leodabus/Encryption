@@ -25,7 +25,7 @@ public extension StringProtocol {
     }
 
     func encrypted<D: ContiguousBytes>(using key: D) throws -> Data? {
-        try sealed(using: key.symmetricKey).combined
+        try sealed(using: key).combined
     }
 }
 

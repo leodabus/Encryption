@@ -21,7 +21,7 @@ public extension StringProtocol {
         using key: D,
         nonce: AES.GCM.Nonce? = nil
     ) throws -> AES.GCM.SealedBox {
-        try AES.GCM.seal(data, using: key, nonce: nonce)
+        try AES.GCM.seal(data, using: key.symmetricKey, nonce: nonce)
     }
 
     func encrypted<D: ContiguousBytes>(using key: D) throws -> Data? {
@@ -40,7 +40,7 @@ public extension DataProtocol {
     func decrypt<D: ContiguousBytes>(using key: D) throws -> Data? {
         try AES.GCM.open(
             sealedBox(),
-            using: key
+            using: key.symmetricKey
         )
     }
 }
