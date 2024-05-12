@@ -56,7 +56,7 @@ public extension ContiguousBytes {
 public extension ByteBuffer {
     var data: Data {
         var bytes = self
-        return bytes.readBytes(length: bytes.readableBytes)!
+        return Data(bytes.readBytes(length: bytes.readableBytes)!)
     }
 }
 
