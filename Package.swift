@@ -14,6 +14,10 @@ let package = Package(
             name: "Encryption",
             targets: ["Encryption"]),
     ],
+    dependencies: [
+        // 💧 A server-side Swift web framework.
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.94.1"),
+        ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.

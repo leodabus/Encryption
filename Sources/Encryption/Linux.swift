@@ -5,8 +5,8 @@
 //  Created by lsd on 10/05/24.
 //
 
-#if os(Linux)
-import Vapor
+#if os(Linux) && canImport(Crypto)
+import Crypto
 
 public extension StringProtocol {
 
