@@ -7,6 +7,13 @@
 
 #if os(Linux)
 import Crypto
+import struct Crypto.SymmetricKey
+import NIOCore
+import struct NIOCore.ByteBuffer
+import Foundation
+import protocol Foundation.ContiguousBytes
+import protocol Foundation.DataProtocol
+import struct Foundation.Data
 
 public extension StringProtocol {
 
