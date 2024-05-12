@@ -1,9 +1,10 @@
 //
-//  File.swift
-//  
+//  iOS.swift
+//
 //
 //  Created by lsd on 10/05/24.
 //
+
 #if os(iOS)
 import Foundation
 import protocol Foundation.ContiguousBytes
@@ -50,5 +51,4 @@ public extension DataProtocol {
 public extension ContiguousBytes {
     var symmetricKey: SymmetricKey { .init(data: self) }
 }
-
 #endif
